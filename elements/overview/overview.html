@@ -1,0 +1,97 @@
+<dom-module id="overview-2015">
+    <style>
+        :host {
+            display: block;
+        }
+
+
+        .listaDeCosasQueAmoDeTi {
+            -webkit-columns: 200px 2; /* Chrome, Safari, Opera */
+            -moz-columns: 200px 2; /* Firefox */
+            columns: 200px 2;
+        }
+
+        .puchiprotip{
+            font-size: 80%;
+        }
+    </style>
+
+    
+
+    <template>
+
+    <h1>
+        BECAUSE I LOVE U!!! x3
+    </h1>
+
+        <h3>
+        La verdad es que no hay una sola razón nwn
+        </h3>
+
+        <p>
+        Pero si me pongo a pensar podría nombrar las siguientes:
+        </p>
+
+        <table style="width:100%">
+          <tr>
+            <td>
+                <ul>
+                    <template is="dom-repeat" items="{{items}}">
+                        <li><span class="paper-font-body1">{{item}}</span></li>
+                    </template>
+                </ul>
+            </td>
+            <td>
+
+            <img src="/img/pusheenlove.png" alt="Puchín and I love U!" height="285" width="360">
+
+            <br>
+            <br>
+
+            <p class="puchiprotip">
+                Puchín Pro Tip:<br>
+                Lee sólo la primera letra de cada punto! :3
+            </p>
+
+            </td> 
+          </tr>
+          
+        </table>
+        
+
+        </div>
+    </template>
+
+</dom-module>
+<script>
+    (function () {
+        Polymer({
+            is: 'overview-2015',
+            properties: {
+                items: {
+                    type: Array,
+                    notify: true,
+                }
+            },
+            ready: function() {
+                this.items = [
+                    'Eres la única persona con quien quiero estar',
+                    'Realmente creo en lo que tenemos, quiero cuidarlo y cuidarte a ti',
+                    'Encendiste en mi algo que creía ya no volvería a sentir por nadie',
+                    'Supiste entrar aunque opuse férrea resistencia',
+                    'Un beso tuyo me lleva a la luna y de regreso',
+                    'No tiene mayúscula luna porque es una luna distante a la que me llevas',
+                    'Icaro o Caronte estarían bien! :D',
+                    'Creo que ya me desvié del tema... Coff coff',
+                    'Aprendo tantas cosas nuevas cada que estamos juntos',
+                    'Ya pasamos el Punto de No Retorno, y sinceramente por mi está bien!',
+                    'Tienes tantas virtudes que admirar, y defectos que amar',
+                    'En serio no puedo creer que haya en el mundo alguien tan encantadora como tu',
+                    'Aquí quiero estar, contigo y sólo para ti',
+                    'Me convenzo cada dia de que tu y yo hacemos bonita pareja',
+                    'Otra vez estar junto a ti es lo mejor del mundo para mi'
+                ];
+            }
+        });
+    })();
+</script>

@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<dom-module id="ios-billpocket">
+<dom-module id="newyear-2015">
     <style>
       :host {
         display: block;
@@ -26,20 +26,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <!-- Listens for "input" event and sets greeting to <input>.value -->
     <paper-input  value="{{greeting::input}}" style="display: inherit" label="Write something! :D">
     </paper-input>
+
+    <paper-button raised onclick="window.open(videoURL,'_blank');">
+                NO PUEDE FALTAR UNA CANCIÓN PARA TI...
+    </paper-button> 
+
   </template>
 </dom-module>
   <script>
+  var videoURL;
+
   (function() {
     Polymer({
-      is: 'ios-billpocket',
+      is: 'newyear-2015',
 
       properties: {
         greeting: {
           type: String,
           value: 'Welcome iOS!',
           notify: true
+        },
+
+        videolink: String
+
+        },
+
+        ready : function(e){
+                videoURL = this.videolink;
         }
-      }
+
     });
     })();
   </script>

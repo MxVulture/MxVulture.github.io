@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<dom-module id="android-billpocket">
+<dom-module id="xmas-2015">
     <style>
       :host {
         display: block;
@@ -29,9 +29,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <div style="height: 10px"></div>
 
-        <paper-button raised onclick="window.location.href=androidURL">
-            <iron-icon icon="cloud-download"></iron-icon>
-            DESCARGA LA DOCUMENTACION
+        <paper-button raised onclick="window.open(androidURL,'_blank');">
+            NO PUEDE FALTAR UNA CANCIÓN PARA TI...
         </paper-button>
 
     </template>
@@ -42,7 +41,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     (function() {
         Polymer({
-            is: 'android-billpocket',
+            is: 'xmas-2015',
 
             properties: {
                 greeting: {
@@ -51,15 +50,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     notify: true
                 },
 
-                apilink: String
+                videolink: String
 
             },
 
             ready : function(e){
-                androidURL = this.apilink;
-
-                console.log(this);
-                console.log(androidURL);
+                androidURL = this.videolink;
             }
 
             });
