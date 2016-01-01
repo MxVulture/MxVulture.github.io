@@ -1,0 +1,24 @@
+{
+  "name": "Integracion",
+  "version": "0.0.1",
+  "authors": [
+    "Victor Macias <vmacias@billpocket.com>"
+  ],
+  "description": "Sitio de documentacion para integracion de apps de terceros",
+  "main": "index.html",
+  "keywords": [
+    "polymer",
+    "Billpocket",
+    "integracion",
+    "API"
+  ],
+  "license": "MIT",
+  "homepage": "www.billpocket.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
