@@ -22,14 +22,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
   <template>
     <h1 class="paper-font-display1"><span>{{greeting}}</span></h1>
-    <span class="paper-font-body2">Update text to change the greeting for iOS.</span>
-    <!-- Listens for "input" event and sets greeting to <input>.value -->
-    <paper-input  value="{{greeting::input}}" style="display: inherit" label="Write something! :D">
-    </paper-input>
 
-    <paper-button raised onclick="window.open(videoURL,'_blank');">
-                NO PUEDE FALTAR UNA CANCIÓN PARA TI...
-    </paper-button> 
+    <paper-button raised onclick="window.open(androidURL,'_blank');">
+        <iron-icon icon="favorite"></iron-icon>
+            NO PUEDE FALTAR UNA CANCIÓN PARA TI...
+        </paper-button>
 
   </template>
 </dom-module>
@@ -43,7 +40,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       properties: {
         greeting: {
           type: String,
-          value: 'Welcome iOS!',
+          value: 'Feliz Año Nuevo! nwn',
           notify: true
         },
 
