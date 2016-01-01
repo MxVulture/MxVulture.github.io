@@ -21,7 +21,7 @@
 
     <style is="custom-style">
         paper-toolbar {
-            --paper-toolbar-background: #2196F3; /* changes the background to blue*/
+            --paper-toolbar-background: #28282A; /* changes the background to blue*/
             --paper-toolbar-color: #E0F7FA; /* changes the foreground color to green */
         --paper-toolbar: {
          }; /* Notice the semicolon here */
@@ -32,24 +32,24 @@
 
     <paper-toolbar class="tall">
         <div class="top flex"></div>
-        <div class="appname middle paper-font-display2">Billpocket: Integración</div>
-        <div class="bottom paper-font-display0">Documentación de integracion para aplicaciones de terceros</div>
+        <div class="appname middle paper-font-display2">Puchín waz here!</div>
+        <div class="bottom paper-font-display0">Also, Víctor le ayudo a hacer esta pequeña paginita para ti *-*</div>
 
     </paper-toolbar>
 
     <template is="dom-bind">
 
-        <div id='tabsContainer' class="container" style="background-color: #1565c0; min-width: 100%; color:#E0F7FA; ">
+        <div id='tabsContainer' class="container" style="background-color: #202022; min-width: 100%; color:#E0F7FA; ">
             <paper-tabs id="tabs" alignBottom="true" selected={{selected}}>
 
                 <paper-tab>
-                    OVERVIEW
+                    WHY
                 </paper-tab>
                 <paper-tab>
-                    EN ANDROID
+                    MERRY XMAS!
                 </paper-tab>
                 <paper-tab>
-                    EN IOS
+                    HAPPY NEW YEAR!
                 </paper-tab>
             </paper-tabs>
 
@@ -83,9 +83,6 @@
                 if (stop === undefined){
                     stop = (tabsContainer.offsetTop);
                 }
-
-//                console.log(scrollTop);
-//                console.log(stop);
 
                 if (scrollTop >= stop) {
                     tabsContainer.className = 'container stick';
