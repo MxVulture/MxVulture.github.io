@@ -1,0 +1,146 @@
+<dom-module id="sorteo-puchin">
+    <style>
+        :host {
+            display: block;
+        }
+
+
+        .listaDeCosasQueAmoDeTi {
+            -webkit-columns: 200px 2; /* Chrome, Safari, Opera */
+            -moz-columns: 200px 2; /* Firefox */
+            columns: 200px 2;
+        }
+
+        .puchinprotip{
+            font-size: 80%;
+        }
+    </style>
+
+    
+
+    <template>
+
+        <table style="width:100%">
+          <tr>
+            <td>
+                <img src="/sorteo/cancan.gif" alt="Puchín and I love U!">
+            </td>
+            <td>
+
+                <h1>
+                    Aquí es donde todo se decide!
+                </h1>
+
+
+            </td> 
+
+            <td>
+                <img src="/sorteo/cancan.gif" alt="Puchín and I love U!">
+            </td>
+          </tr>
+          
+        </table>
+
+        <h3>
+        Los destinos están seleccionados y la suerte está echada, te atreves a ver a donde irán Nadia, Vítor y el Puchín?
+        </h3>
+
+        <table style="width:100%">
+          <tr>
+            <td>
+                <ul>
+                    <template is="dom-repeat" items="{{items}}">
+                        <li><span class="paper-font-title2">{{item}}</span></li>
+                    </template>
+                </ul>
+            </td>
+
+            <td>
+
+                <h3 class="paper-font-title2"><span>{{ganador}}</span></h1>
+
+                <paper-button raised onclick="sorteo()">
+                <iron-icon icon="stars"></iron-icon>
+                    INICIAR SORTEO
+                <iron-icon icon="stars"></iron-icon>
+            </paper-button>
+
+            </td>
+            
+          </tr>
+          
+        </table>
+        
+
+        </div>
+    </template>
+
+</dom-module>
+<script>
+
+function sorteo(){
+    item = [
+                    'Huasteca Potosina',
+                    'Riviera Maya',
+                    'Mérida',
+                    'Cozumel',
+                    'Barrancas de Cobre',
+                    'Ciudad rara en San Luis Potosí',
+                ];
+
+    var temp = document.querySelector("sorteo-puchin");
+
+    
+    var len = temp.items.length;
+
+    var random = Math.floor(Math.random() * (len));
+    random = Math.floor(Math.random() * (len));
+    random = Math.floor(Math.random() * (len));
+    random = Math.floor(Math.random() * (len));
+    random = Math.floor(Math.random() * (len));
+    random = Math.floor(Math.random() * (len));
+
+    console.log(random);
+
+
+    temp.ganador = "El destino ha deparado: " + temp.items[random];
+
+    var btn = document.querySelector("paper-button");
+    btn.style.visibility = "hidden";
+
+};
+
+    (function () {
+        Polymer({
+            is: 'sorteo-puchin',
+            properties: {
+                items: {
+                    type: Array,
+                    notify: true,
+                },
+
+                ganador: {
+                    type: String,
+                    value: 'Quién sabe que destino les depare la suerte!',
+                    notify: true,
+                    reflectToAttribute: true,
+                }
+            },
+            ready: function() {
+                this.items = [
+                    'Huasteca Potosina',
+                    'Riviera Maya',
+                    'Mérida',
+                    'Cozumel',
+                    'Barrancas de Cobre',
+                    'Ciudad rara en San Luis Potosí',
+                ];
+            },
+
+            sortear: function(){
+                console.log(ganador);
+            }
+
+        });
+    })();
+</script>
