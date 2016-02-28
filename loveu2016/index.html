@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>H4ppy V4l3nt1n3s!</title>
+
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- endbuild -->
+    <link rel="import" href="../elements/elements.html">
+    <link rel="import" href="valentines-2016/valentines-2016.html">
+
+    <style type="text/css">
+    a:hover {
+        color: #B2DFDB;
+    }
+
+    a:visited {
+        color: #B2DFDB;
+    }
+
+    a {
+        color: #B2DFDB;
+    }
+    </style>
+
+    <script type="text/javascript">
+        function randomCorp(){
+            var shit = document.getElementById('EvilCorp');
+
+            var random = Math.round( Math.random() * 2 );
+
+            if (random % 2 == 0){
+                shit.innerHTML = "Powered by <b>E&nbsp&nbsp&nbsp&nbsp&nbspCorp</b>";
+            } else {
+                shit.innerHTML = "Powered by <b>Evil Corp</b>";
+            }
+
+            setTimeout(randomCorp, 200);
+
+        }
+
+
+        setTimeout(randomCorp, 1000);
+
+        var fucks
+
+        function randomDiploma(){
+            var shit = document.getElementById('diploma');
+
+            // console.log(shit);
+
+            var random = Math.round( Math.random() * 2 );
+
+            if (random % 2 == 0){
+                shit.innerHTML = "Licenciatura";
+                setTimeout(randomDiploma, 7000);
+            } else {
+                shit.innerHTML = "&nbspdiplomado&nbsp&nbsp";
+                setTimeout(randomDiploma, 1000);
+            }
+
+          
+
+        }
+
+        fucks = setTimeout(randomDiploma, 1000);  
+
+    </script>
+
+</head>
+
+
+<body unresolved class="fullbleed layout" style="background-color: #D1C4E9;">
+
+    <style is="custom-style">
+        paper-toolbar {
+            --paper-toolbar-background: #FF4081; /* changes the background to blue*/
+            --paper-toolbar-color: #E0F7FA; /* changes the foreground color to green */
+        --paper-toolbar: {
+         }; /* Notice the semicolon here */
+        }
+
+        
+    </style>
+
+
+
+    <paper-toolbar class="tall">
+        <div class="top flex"></div>
+        <div class="appname middle paper-font-display2 graffite">H4ppy V4l3nt1n3s D4y! L0v3 u s0 much!</div>
+        <div class="bottom paper-font-display0">
+        <br>
+        Did you lose a <a target="_blank" href="https://en.wikipedia.org/wiki/Timestamp">timestamp</a>? because I think it's <a target="_blank" href="https://msdn.microsoft.com/en-us/library/system.datetime.now(v=vs.110).aspx">Datetime.Now;</a>!&nbsp&nbsp&nbsp(¬w¬)<br><br>
+
+        </div>
+
+    </paper-toolbar>
+
+    <template is="dom-bind">
+
+        <div id="content" class="container">
+            <paper-material elevation="2">
+                
+                <valentines-2016>
+                </valentines-2016>
+
+
+            </paper-material>
+        </div>
+
+        <div id="content" class="container">
+            <paper-material elevation="1">
+                <p id="EvilCorp" style="text-align:right">
+                Powered by <b>E&nbsp&nbsp&nbsp&nbsp&nbspCorp</b>
+                </p>
+                <p class="puchinprotip" style="font-size: 80%; text-align:right;">
+                    With love and <a href="https://open.spotify.com/track/0XCdU4vq1clUkbncu89AA4" target="_blank"><b>tejuino en el Camaro</b></a>
+                </p>
+
+            </paper-material>
+        </div>
+
+        <script>
+//             var tabs = document.getElementById('tabs');
+
+//             var tabsContainer = document.getElementById('tabsContainer');
+//             var content = document.getElementById('content');
+
+//             var stop = undefined;
+//             window.onscroll = function (e) {
+//                 var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
+//                 if (stop === undefined){
+//                     stop = (tabsContainer.offsetTop);
+//                 }
+
+//                 // if (scrollTop >= stop) {
+//                 //     tabsContainer.className = 'container stick';
+//                 //     content.className = 'container fu'
+//                 // } else {
+//                 //     tabsContainer.className = 'container';
+//                 //     content.className = 'container'
+//                 // }
+
+//             }
+
+//             if (navigator.userAgent.match(/Mobi/)) {
+//                 document.querySelector('#tabs').setAttribute('noink', '');
+// //                console.log(document.querySelector('#tabs'));
+//             }
+
+        </script>
+
+    </template>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,111 @@
+<dom-module id="valentines-2016">
+    <style>
+        :host {
+            display: block;
+        }
+
+
+        .listaDeCosasQueAmoDeTi {
+            -webkit-columns: 200px 2; /* Chrome, Safari, Opera */
+            -moz-columns: 200px 2; /* Firefox */
+            columns: 200px 2;
+        }
+
+        .puchinprotip{
+            font-size: 80%;
+        }
+    </style>
+
+    
+
+    <template>
+
+        <table style="width:80%">
+          <tr>
+            <td>
+                <img src="/loveu2016/loveeyes_scale.png" alt="Puchín and I love U!" width="100" height="100" style="padding-right: 20px">
+            </td>
+            <td>
+
+                <h1>
+                    V4l3nt1n3's d4y h4s b33n h4ck3d!
+                </h1>
+
+
+            </td> 
+          </tr>
+          
+        </table>
+
+        <h3>
+        Y tu, N4d14 M0r3n0, la última l33t h4x0r con <span id="diploma">&nbspdiplomado&nbsp&nbsp</span> en Diseño Gráfico debe salvarlo de las patitas del malvado D0ct0r T0c1n0!!!
+        </h3>
+
+        <br>
+
+        <h4 class="paper-font-title2"><span>1.- Descarga la aplicación con el siguiente botón</span></h4>
+
+        <paper-button raised onclick="installApp()">
+            Soy una enojoncita :D
+        <iron-icon icon="favorite"></iron-icon>
+        </paper-button>
+
+        <br>
+        <br>
+
+        <h4 class="paper-font-title2"><span>2.- Busca con la aplicación pistas en el envío especial de parte de D0ct0r T0c1n0!</span></h4>
+
+        <br>
+
+        <h4 class="paper-font-title2"><span>3.- Salva el Día de San Valentín!!!</span></h4>
+
+        <br>
+
+        <h5 class="paper-font-title2"><span>My love for you is more than meets the eye... And you'll soon se why... nwn</span></h5>
+        
+
+        </div>
+    </template>
+
+</dom-module>
+<script>
+
+function installApp(){
+    document.location.replace('itms-services://?action=download-manifest&url=http://mxvulture.github.io/loveu2016/LoveU.plist');
+
+};
+
+    (function () {
+        Polymer({
+            is: 'valentines-2016',
+            properties: {
+                items: {
+                    type: Array,
+                    notify: true,
+                },
+
+                ganador: {
+                    type: String,
+                    value: 'Quién sabe que destino les depare la suerte!',
+                    notify: true,
+                    reflectToAttribute: true,
+                }
+            },
+            ready: function() {
+                this.items = [
+                    'Huasteca Potosina',
+                    'Riviera Maya',
+                    'Mérida',
+                    'Cozumel',
+                    'Barrancas de Cobre',
+                    'Ciudad rara en San Luis Potosí',
+                ];
+            },
+
+            sortear: function(){
+                console.log(ganador);
+            }
+
+        });
+    })();
+</script>
